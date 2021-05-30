@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project ToDo List</title>
+    <link rel = "stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" media="(max-width: 800px)" href="phone.css" />
+</head>
+<body>
+<header>
+    <h1>Minha Lista de Tarefas</h1>
+    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+
+</header>
+<main>
+    <section>
+        <div id="input">
+            <input type="text" id="texto-tarefa" name="texto-tarefa">
+            <button id="criar-tarefa" onclick="makeList()">Adicionar</button>
+        </div>
+        <div id="list-place">
+            <ol id="lista-tarefas">
+
+            </ol>
+        </div>
+        <div id= "allbuttons">
+
+            <div id="remover-cima-baixo">
+                <button id="remover-selecionado" onclick="deleteSelected()">X</button>
+                <button id="mover-cima" onclick="upList()">&uarr;</button>
+                <button id="mover-baixo" onclick="downList()">&darr;</button>
+            </div>
+            <div id="botao-apagar-tudo">
+                <button id="apaga-tudo" onclick="deleteAll()">Limpar Lista</button>
+            </div>
+            <div id="botao-remover-finalizados">
+                <button id="remover-finalizados" onclick="deleteCompleted()">Limpar Completos</button>
+            </div>
+            <div id="salvar-lista">
+    
+                <button id="salvar-tarefas" onclick="saveUserList()">Salvar Lista</button>
+            </div>  
+        </div>
+        
+        
+    
+    </section>
+    
+</main>
+
+    
+<script src="script.js" defer></script>   
+</body>
+</html>
